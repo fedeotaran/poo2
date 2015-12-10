@@ -15,7 +15,7 @@ Adapter
 Compisite
 ---------
 
-*Compone objetos en estructuras de árbol para representar jerarquías de parte-todo. Permite que los clientes traten de manera iniforme a los objetos individuales y a los compuestos.*
+*Compone objetos en estructuras de árbol para representar jerarquías de parte-todo. Permite que los clientes traten de manera uniforme a los objetos individuales y a los compuestos.*
 
 ### Aplicabilidad
 
@@ -35,21 +35,21 @@ Decorator
 
 Observer
 --------
+
 *Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y se actualicen automáticamente todos los objetos que dependen de él.*
 
 ### Aplicabilidad
 
-* Cuando una abstracción tiene dos aspectos y uno depende del otro. Excapsular estos aspectos en objetos separados permite modificarlos y reutilizarlos de forma independiente.
+* Cuando una abstracción tiene dos aspectos y uno depende del otro. Encapsular estos aspectos en objetos separados permite modificarlos y reutilizarlos de forma independiente.
 * Cuando un cambio en un objeto requiere cambiar otros, y no sabemos cuántos objetos necesitan cambiarse.
 * Cuando un objeto debería ser capaz de notificar a otros sin hacer suposiciones sobre quiénes son dichos objetos. En otras palabras, cuando no queremos que estos objetos estén fuertemente acoplados.
 
 State
 -----
 
-*Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno. Parecera que cambia la clase del objeto.*
+*Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno. Parecerá que cambia la clase del objeto.*
 
 ### Aplicabilidad
 
-* El comportamiento de un objeto depende de su estado, y debe cambiar en tiempo de ejecucion dependiendo de ese estado.
-* Las operaciones tiene largas sentencias condicionales con multiples ramas que dependen del estado del objeto. Este estado, se suele representar por una o mas constantes enumeradas. Muchas veces son varias las operaciones que contienen esta misma estructura condicional. Este patron pone cada rama de la condicion en una clase aparte.
-
+* El comportamiento de un objeto depende de su estado, y debe cambiar en tiempo de ejecución dependiendo de ese estado.
+* Las operaciones tiene largas sentencias condicionales con múltiples ramas que dependen del estado del objeto. Este estado, se suele representar por una o mas constantes enumeradas. Muchas veces son varias las operaciones que contienen esta misma estructura condicional. Este patrón pone cada rama de la condición en una clase aparte.
