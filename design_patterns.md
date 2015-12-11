@@ -4,10 +4,12 @@ Patrones
 ¿Qué es un patrón de diseño?
 Cada patrón describe un problema que ocurre una y otra vez en un contexto y su solución, de tal modo que se pueda aplicar esta solución miles de veces, sin hacer lo mismo dos veces.
 Un patrón tiene cuatro elementos esenciales:
+
 1. El *nombre del patrón*, que permite describir un problema de diseño junto con sus soluciones y consecuencias. 
 2. El *problema*, que describe cuándo aplicar el patrón, explica el problema y su contexto. A veces el problema incluye una serie de condiciones que deben darse para que tenga sentido aplicar el patrón.
 3. La *solución*, que describe los elementos que constituyen el diseño, sus relaciones, responsabilidades y colaboraciones. La solución no describe un diseño o una implementación en concreto, sino que un patrón es más bien como una plantilla que puede aplicarse en muchas situaciones diferentes.
 4. Las *consecuencias*, son los resultados así como las ventajas e inconvenientes de aplicar el patrón. Son fundamentales para evaluar las alternativas de diseño y comprender los costes y beneficios de aplicar el patrón. Las consecuencias incluyen su impacto sobre la flexibilidad, extensibilidad y portabilidad de un sistema.
+
 
 El patrón identifica las clases de instancias principales, sus roles y colaboraciones, y la distribución de responsabilidades. Cada patrón de diseño se centra en un problema concreto, describiendo cuándo aplicarlo y si tiene sentido hacerlo teniendo en cuenta otras restricciones de diseño, así como las consecuencias y las ventajas e inconvenientes de su uso.
 
