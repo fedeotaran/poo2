@@ -23,8 +23,8 @@ Cada patrón de diseño se divide en las secciones de acuerdo a la siguiente pla
 * Estructura: representación gráfica de las clases del patrón.
 * Participantes: las clases y objetos participantes en el patrón de diseño, junto con sus responsabilidades.
 * Colaboraciones: cómo colaboran los participantes para llevar a cabo sus responsabilidades.
-* Consecuencias: responde a ¿cómo consigue el patrón sus objetivos? ¿cúales son las ventajas, inconvenientes y los resultados de usar el patrón? ¿qué aspectos de la estructura del sistema se pueden modificar de forma independiente?
-* Implementación: ¿cúales son las dificultades, trucos o técnicas que deberíamos tener en cuenta a la hora de aplicar el patrón? ¿hay cuestiones específicas del lenguaje?
+* Consecuencias: responde a ¿cómo consigue el patrón sus objetivos? ¿cuáles son las ventajas, inconvenientes y los resultados de usar el patrón? ¿qué aspectos de la estructura del sistema se pueden modificar de forma independiente?
+* Implementación: ¿cuáles son las dificultades, trucos o técnicas que deberíamos tener en cuenta a la hora de aplicar el patrón? ¿hay cuestiones específicas del lenguaje?
 
 Singleton
 ---------
@@ -55,7 +55,7 @@ Composite
 ### Aplicabilidad
 
 * Quiera representar jerarquías de objetos parte-todo.
-* Quiera que los clientes sean capases de obviar las diferencias entre composiciones de objetos y los objetos individuales. Los clientes tratarán a todos los objetos de la estructura compuesta de manera uniforme.
+* Quiera que los clientes sean capaces de obviar las diferencias entre composiciones de objetos y los objetos individuales. Los clientes tratarán a todos los objetos de la estructura compuesta de manera uniforme.
 
 Decorator
 ---------
@@ -67,6 +67,12 @@ Decorator
 * Para añadir objetos individuales de forma dinámica y transparente, es decir, sin afectar a otros objetos.
 * Para responsabilidades que pueden ser retiradas.
 * Cuando la extensión mediante la herencia no es viable. A veces es posible tener un gran número de extensiones independientes, produciéndose una explosión de subclases para permitir todas las combinaciones. O puede ser que una definición de una clase esté oculta o que no esté disponible para ser heredada.
+
+
+### Consecuencias
++ Permite mayor flexibilidad que la herencia: se puede agregar o quitar comportamiento dinámicamente, en cambio con herencia esto se decide estáticamente.
++ Permite agregar funcionalidad incrementalmente.
+- Mayor cantidad de objetos.
 
 Observer
 --------
@@ -111,4 +117,28 @@ Template method
 * Para implementar las partes de un algoritmo que no cambian y dejar que sean las subclases quienes implementen el comportamiento que puede variar.
 * Cuando el comportamiento repetido de varias subclases debería factorizarse y ser localizado en una clase común para evitar el código duplicado. Ésta es una buena idea de "refactorizar para generalizar". Primero se identifican las diferencias en el código existente, luego se separan dichas diferencias en nuevas operaciones. Por último, se sustituye el código que cambia por un método que llama a una de estas nuevas operaciones.
 * Para controlar las extensiones de las subclases. Podemos definir un método plantilla que llame a operaciones "de enganche" en determinados puntos, permitiendo así las extensiones sólo en esos puntos.
-*
+
+State vs. Strategy
+------------------
+
+* Tienen el mismo diagrama de clases y la misma idea de delegación.
+* Pero:
+  * En el State, el estado es privado del objeto, ningún otro objeto sabe de él. En cambio, en el Strategy, el estado suele setearse por el cliente, que debe conocer las posibles estrategias concretas.
+  * Un State define una máquina de estados con sus transiciones.
+  * Cada State puede definir muchos mensajes. En cambio, un Strategy suele tener un único mensaje público.
+  * Los State concretos se conocen entre sí, mientras que los Strategy concretos no.
+
+Adapter (wrappers) vs. Decorator
+--------------------------------
+* Ambos patrones "decoran" el objeto para cambiarlo.
+* Decorator *preserva* la interfaz del objeto para el cliente. En cambio el Adapter *convierte* la interfaz del objeto para el cliente.
+* Los Decorator pueden y suelen anidarse, los Adapter no se anidan.
+
+Decorator vs. Strategy
+----------------------
+
+* Ambos permiten cambiar el comportamiento de un objeto.
+* Pero:
+  * El Decorator cambia el envoltorio, y el Strategy cambia el objeto internamente.
+  * El componente no conoce quien o quienes lo decoran. Con Strategy, el componente debe conocer a sus posibles estrategias, lo que lo hace menos extensible.
+  * El protocolo de Decorator debe ser igual al de su componente. En el Strategy puede ser otro protocolo. Entonces, Strategy conviene cuando la clase Component es muy pesada.
