@@ -36,6 +36,8 @@ Singleton
 * Deba haber exactamente una instancia de una clase, y ésta debe ser accesible a los clientes desde un punto de acceso conocido.
 * La única instancia debería ser extensible mediante herencia, y los clientes deberían ser capaces de usar una instancia extendida sin modificar su código.
 
+![Adapter](/images/singleton.png)
+
 Adapter
 -------
 
