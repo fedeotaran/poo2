@@ -6,7 +6,7 @@ Resumen para final de Orientación a Objetos 2
 Índice de contenidos
 --------------------
 
-[x] [Patrones](https://github.com/fedeotaran/poo2/blob/master/design_patterns.md)
-[x] [Framework](https://github.com/fedeotaran/poo2/blob/master/framework.md)
-[x] [Refactoring](https://github.com/fedeotaran/poo2/blob/master/refactoring.md)
-[x] [Testing](https://github.com/fedeotaran/poo2/blob/master/testing.md)
+- [x] [Patrones](https://github.com/fedeotaran/poo2/blob/master/design_patterns.md)
+- [x] [Framework](https://github.com/fedeotaran/poo2/blob/master/framework.md)
+- [x] [Refactoring](https://github.com/fedeotaran/poo2/blob/master/refactoring.md)
+- [x] [Testing](https://github.com/fedeotaran/poo2/blob/master/testing.md)
