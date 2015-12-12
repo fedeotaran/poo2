@@ -5,6 +5,23 @@ Framework
 Instanciar/especializar un framework es completar/configurar sus hotspot para obtener una aplicación particular. A esas modificaciones se las llama incremento.
 Una característica importante de los frameworks es que los métodos definidos por el usuario para adaptar el framework generalmente van a ser llamados desde el framwork, y no desde el código de la aplicación del usuario (inversión de control). El framwork tiene el rol de programa principal, coordinando y secuenciando la actividad de la aplicación.*
 
+### Impacto del uso de frameworks
+
+#### Beneficios
+
+* Modularidad: los frameworks mejoran la modularidad al encapsular (esconder) detalles de implementación volátiles detrás de un conjunto de interfaces estables. La modularidad de los frameworks ayuda a mejorar la calidad del software al localizar el impacto de cambios de diseño e implementación.
+
+* Reusabilidad: las interfaces estables que provee el framework aumentan la reusabilidad al definir componentes genéricos que pueden ser utilizados una y otra vez para crear aplicaciones nuevas. El resudo de componentes puede traer un incremento substancial en la productividad, al mismo tiempo que mejora la calidad, performance, confiabilidad, e interoperabilidad del software.
+
+* Extensibilidad: un framework mejora la extensibilidad al proveer métodos gancho explícitos que permiten a las aplicaciones extender sus interfaces estables. Los métodos gancho desacoplan sistemáticamente las interfaces estables y el comportamiento de la aplicación de las variaciones requeridas por distintas instanciaciones de la aplicación. 
+
+#### Dificultades
+
+* Son difíciles de desarrollar, y necesitan de mantenimiento. Para esto es necesario el código fuente y conocimiento experto.
+* Requieren un esfuerzo adicional de aprendizaje.
+* Los componentes abstractos son más difíciles de validar.
+* La inversión de control dificulta la validación de las aplicaciones que usan frameworks: no se tiene el control ni el código.
+
 Inversión de control
 --------------------
 
@@ -59,4 +76,4 @@ Tipos de frameworks
 * Estos frameworks atacan dominios de aplicación amplios que son pilares fundamentales de las actividades de las empresas.
 * Ejemplos de frameworks enterprise son aquellos en el dominio y ERP (Enterprise Resource Planning), CRM (Customer Relationship Management), Gestión de documentos, Cálculos financieros.
 * Los problemas que atacan derivan directamente de las necesidades de los usuarios de las aplicaciones y por tanto hacen que el retorno de la inversión sea más evidente y justificado.
-* Puede encapsular el conocimiento y experiencia de muchos años de una empresa, transformándose en la clave de su ventaja competitiva y su más preciado capital
+* Puede encapsular el conocimiento y experiencia de muchos años de una empresa, transformándose en la clave de su ventaja competitiva y su más preciado capital.

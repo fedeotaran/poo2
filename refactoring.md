@@ -30,7 +30,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Se aplica cuando se tiene métodos largos y/o muy comentados. Ayuda a incrementar reuso y legibilidad.*
 
-#### Mecánica:
+#### Mecánica
 
 * crear un nuevo método cuyo nombre explique su propósito
 * copiar el código a extraer en el nuevo método
@@ -49,7 +49,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Un método esta usando o usará muchos servicios que están definidos en una clase diferente a la suya (feature envy).*
 
-#### Mecánica:
+#### Mecánica
 
 * revisar otros atributos y métodos en la clase original
 * chequear subclases y superclases
@@ -64,7 +64,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Se utiliza para quitar las variables temporales que, al ser locales, fomentan métodos largos. Además, nos permite usar una expresión desde otros métodos. Se aplica antes de realizar un extract method.*
 
-#### Mecánica:
+#### Mecánica
 
 * encontrar las variables temporales con una sola asignación
 * extraer el lado derecho de la asignación
@@ -76,7 +76,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Cuando se tiene un condicional que derivan en sentencias con distintos comportamientos.*
 
-#### Mecánica:
+#### Mecánica
 
 * mover la sentencia swich a la superclase de la jerarquía
 * copiar una rama del case en su correspondiente subclase
@@ -88,7 +88,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Se utiliza cuando el cuerpo del método es tan claro como su nombre.*
 
-#### Mecánica:
+#### Mecánica
 
 * Insertar el cuerpo del método en el cuerpo de los que lo invocan y borrar el método
 
@@ -96,7 +96,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Se utiliza cuando las subclases tienen métodos que realizan una tarea similar.*
 
-#### Mecánica:
+#### Mecánica
 
 * Hacer que los métodos similares hagan exactamente lo mismo
 * Mover los métodos a la superclase
@@ -105,7 +105,7 @@ Se realiza refactoring de código identificando los "malos olores" del mismo y a
 
 *Se utiliza cuando un método en la superclase sólo es usado por una de sus subclases*
 
-#### Mecánica:
+#### Mecánica
 
 * Mueve este comportamiento a la subclase que lo utiliza
 
