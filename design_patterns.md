@@ -36,7 +36,7 @@ Singleton
 * Deba haber exactamente una instancia de una clase, y ésta debe ser accesible a los clientes desde un punto de acceso conocido.
 * La única instancia debería ser extensible mediante herencia, y los clientes deberían ser capaces de usar una instancia extendida sin modificar su código.
 
-![Adapter](/images/singleton.png)
+![singleton](/images/singleton.png)
 
 Adapter
 -------
@@ -49,6 +49,8 @@ Adapter
 * Se quiere crear una clase reutilizable que coopere con clases no relacionadas o que no han sido previstas, es decir, clases que no tienen por qué tener interfaces compatibles.
 * Es necesario usar varias subclases existentes, pero no resulta práctico adaptar su interfaz heredando de cada una de ellas. Un adaptador de objetos puede adaptar la interfaz de su clase padre.
 
+![adapter](/images/adapter.png)
+
 Composite
 ---------
 
@@ -58,6 +60,8 @@ Composite
 
 * Quiera representar jerarquías de objetos parte-todo.
 * Quiera que los clientes sean capaces de obviar las diferencias entre composiciones de objetos y los objetos individuales. Los clientes tratarán a todos los objetos de la estructura compuesta de manera uniforme.
+
+![composite](/images/composite.png)
 
 Decorator
 ---------
@@ -70,11 +74,12 @@ Decorator
 * Para responsabilidades que pueden ser retiradas.
 * Cuando la extensión mediante la herencia no es viable. A veces es posible tener un gran número de extensiones independientes, produciéndose una explosión de subclases para permitir todas las combinaciones. O puede ser que una definición de una clase esté oculta o que no esté disponible para ser heredada.
 
-
 ### Consecuencias
 + Permite mayor flexibilidad que la herencia: se puede agregar o quitar comportamiento dinámicamente, en cambio con herencia esto se decide estáticamente.
 + Permite agregar funcionalidad incrementalmente.
 - Mayor cantidad de objetos.
+
+![decorator](/images/decorator.png)
 
 Observer
 --------
@@ -87,6 +92,8 @@ Observer
 * Cuando un cambio en un objeto requiere cambiar otros, y no sabemos cuántos objetos necesitan cambiarse.
 * Cuando un objeto debería ser capaz de notificar a otros sin hacer suposiciones sobre quiénes son dichos objetos. En otras palabras, cuando no queremos que estos objetos estén fuertemente acoplados.
 
+![observer](/images/observer.png)
+
 State
 -----
 
@@ -96,6 +103,8 @@ State
 
 * El comportamiento de un objeto depende de su estado, y debe cambiar en tiempo de ejecución dependiendo de ese estado.
 * Las operaciones tiene largas sentencias condicionales con múltiples ramas que dependen del estado del objeto. Este estado, se suele representar por una o mas constantes enumeradas. Muchas veces son varias las operaciones que contienen esta misma estructura condicional. Este patrón pone cada rama de la condición en una clase aparte.
+
+![state](/images/state.png)
 
 Strategy
 --------
@@ -109,6 +118,8 @@ Strategy
 * Un algoritmo usa datos que los clientes no deberían conocer. Úsese el patrón Strategy para evitar exponer estructuras de datos complejas y dependientes del algoritmo.
 * Una clase define muchos comportamientos, y éstos se representan como múltiples sentencias condicionales en sus operaciones. En vez de tener muchos condicionales, podemos mover las ramas de éstos a su propia clase Estrategia.
 
+![strategy](/images/strategy.png)
+
 Template method
 ---------------
 
@@ -119,6 +130,8 @@ Template method
 * Para implementar las partes de un algoritmo que no cambian y dejar que sean las subclases quienes implementen el comportamiento que puede variar.
 * Cuando el comportamiento repetido de varias subclases debería factorizarse y ser localizado en una clase común para evitar el código duplicado. Ésta es una buena idea de "refactorizar para generalizar". Primero se identifican las diferencias en el código existente, luego se separan dichas diferencias en nuevas operaciones. Por último, se sustituye el código que cambia por un método que llama a una de estas nuevas operaciones.
 * Para controlar las extensiones de las subclases. Podemos definir un método plantilla que llame a operaciones "de enganche" en determinados puntos, permitiendo así las extensiones sólo en esos puntos.
+
+![template_method](/images/template.png)
 
 State vs. Strategy
 ------------------
