@@ -1,8 +1,6 @@
 Testing
 =======
 
-*i*
-
 TDD (testing development driven)
 --------------------------------
 
